@@ -197,6 +197,27 @@ span {
   transform: translate(-50%, -30%);
 }
 
+/*Order*/
+
+.order{
+  height: 600px;
+  background-color: khaki;
+  text-align: center;
+}
+.text{
+  position: absolute;
+  top:150px;
+  right:0;
+  left:0;
+}
+
+/*FoodComponent*/
+.form .grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+
 /*Media*/
 
 
@@ -355,14 +376,9 @@ span {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Margin */
