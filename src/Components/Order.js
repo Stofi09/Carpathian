@@ -3,35 +3,41 @@ import { FoodComponent } from './FoodComponent';
 
 export const Order = () => {
 
+    const [sum, setSum] = useState(0);
     const [foods, setFoods] = useState([
         {
             id:0,
             main:"hamburger",
-            amount:0
+            amount:0,
+            price:100
         },
         {
             id:1,
-            main:"cheeseburger",
-            amount:0   
+            main:"vegburger",
+            amount:0,
+            price:300
         },
         {
             id:2,
-            main:"vegburger",
-            amount:0
+            main:"cheeseburger",
+            amount:0,
+            price:200   
         }
     ])
-    
+
     
     const addFood = (id) =>{
         const updateFoods = [...foods];
         updateFoods[id].amount++;
         setFoods(updateFoods)
+        setSum( updateFoods[id].price + sum)
     }
 
     const removeFood = (id) => {
         const updateFoods = [...foods];
         if (updateFoods[id].amount > 0){
             updateFoods[id].amount--;
+            setSum( sum - updateFoods[id].price)
         }
         setFoods(updateFoods)
     }
@@ -48,6 +54,7 @@ export const Order = () => {
                         removeFood = {removeFood}
                         />
                     )}
+                    <h2>Total sum : {sum}</h2>
                 </div>
            </div>
         </div>
