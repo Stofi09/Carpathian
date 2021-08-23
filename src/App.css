@@ -200,7 +200,7 @@ span {
 /*Order*/
 
 .order{
-  height: 600px;
+  height: 1600px;
   background-color: khaki;
   text-align: center;
 }
@@ -211,6 +211,15 @@ span {
   left:0;
 }
 
+.sticky{
+  position: fixed;
+   left: 33%;
+   bottom: 0;
+   width: 34%;
+   background-color: var(--primary-color);
+   color: white;
+   text-align:center;
+}
 /*FoodComponent*/
 .form .grid{
   display: grid;
@@ -242,6 +251,10 @@ span {
 }
 /*Utilities*/
 
+.button{
+  width: 50%;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -251,7 +264,7 @@ span {
 
 .btn {
   display: inline-block;
-  padding: 10px 30px;
+  padding: 10px 10px;
   cursor: pointer;
   background: var(--primary-color);
   color: #fff;

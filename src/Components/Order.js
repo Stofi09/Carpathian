@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import { FoodComponent } from './FoodComponent';
+import Button from '@material-ui/core/Button';
 
 export const Order = () => {
 
@@ -54,7 +55,13 @@ export const Order = () => {
                         removeFood = {removeFood}
                         />
                     )}
-                    <h2>Total sum : {sum}</h2>
+                   
+                </div>
+           </div>
+           <div className="sticky">
+               <div className=" grid">
+                    <h2>Total sum : {sum}</h2> 
+                    <Button variant="contained" className="button">Buy</Button>
                 </div>
            </div>
         </div>
