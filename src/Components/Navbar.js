@@ -25,15 +25,15 @@ export const Navbar = () => {
                     </ul>
                 </nav>
           </div>
-          <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={toggleSideBar} />
+          <Link to='#' className='menu-bars' >
+            <FaIcons.FaBars onClick={toggleSideBar} color="gold"/>
           </Link>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
           <ul className='nav-menu-items' onClick={toggleSideBar}>
             <li className='navbar-toggle'>
               <Link to='#' className='menu-bars'>
-                <AiIcons.AiOutlineClose />
+                <AiIcons.AiOutlineClose  color="gold" />
               </Link>
             </li>
             {SidebarData.map((item, index) => {
