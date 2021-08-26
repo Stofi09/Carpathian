@@ -1,8 +1,10 @@
 import React,{useState} from 'react'
 import { FoodComponent } from './FoodComponent';
 import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
 
 export const Order = () => {
+    
 
     const [sum, setSum] = useState(0);
     const [foods, setFoods] = useState([
@@ -59,9 +61,9 @@ export const Order = () => {
                 </div>
            </div>
            <div className="sticky">
-               <div className=" grid">
+               <div className=" flex">
                     <h2>Total sum : {sum}</h2> 
-                    <Button variant="contained" className="button">Buy</Button>
+                    <button className="btn-outline">asd</button>
                 </div>
            </div>
         </div>
