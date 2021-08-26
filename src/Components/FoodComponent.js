@@ -1,10 +1,13 @@
 import React from 'react'
-import IconButton from '@material-ui/core/IconButton';
-import AddButton from '@material-ui/icons/Add';
-import RemoveButton from '@material-ui/icons/Remove';
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
+
+
+
 
 export const FoodComponent = ({Food, addFood, removeFood}) => {
     
+
     const removeOnClick = () => {
         removeFood(Food.id);
     }
@@ -14,16 +17,12 @@ export const FoodComponent = ({Food, addFood, removeFood}) => {
     }
 
     return (
-        <div className="form m-2">
+        <div className="form">
             <div className="grid">
                 <h3>{Food.id} {Food.main} : </h3>
-                <IconButton onClick={removeOnClick} aria-label="delete">
-                    <RemoveButton />
-                </IconButton>
+                <RemoveIcon onClick={removeOnClick}/>
                 <h3>{Food.amount}</h3>
-                <IconButton onClick={AddOnClick} aria-label="delete">
-                    <AddButton />
-                </IconButton>
+                <AddIcon onClick={AddOnClick} fontSize="medium"/>
             </div>
         </div>
     )
