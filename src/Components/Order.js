@@ -10,21 +10,21 @@ export const Order = () => {
     const [foods, setFoods] = useState([
         {
             id:0,
-            main:"hamburger",
+            main:"hamburger menu",
             amount:0,
-            price:100
+            price:10
         },
         {
             id:1,
-            main:"vegburger",
+            main:"vegburger menu",
             amount:0,
-            price:300
+            price:30
         },
         {
             id:2,
-            main:"cheeseburger",
+            main:"cheeseburger menu",
             amount:0,
-            price:200   
+            price:20   
         }
     ])
 

@@ -207,8 +207,8 @@ span {
 .text{
   position: absolute;
   top:150px;
-  right:0;
-  left:0;
+  right:20px;
+  left:20px;
 }
 
 .sticky{
@@ -230,11 +230,42 @@ span {
 }
 
 /*FoodComponent*/
+.form{
+  
+  border: 2px solid var(--text-color);
+  border-radius: 5px;
+  padding: 10px 80px;
+  margin: 15px 15px;
+}
 .form .grid{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
 }
-
+.form .input{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 5px;
+}
+.description{
+  width: 100%;
+  margin-left: 5px;
+}
+.asd{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  border: 2px solid var(--text-color);
+}
+.asd:hover{
+  background-color: var(--primary-color);  
+}
+.asd:active{
+  box-shadow: 0 2px #666;
+  transform: translateY(1px);
+}
 
 /*Media*/
 
@@ -242,6 +273,9 @@ span {
   .sticky{
     left: 15%;
     width: 70%;
+  }
+  .form{
+    padding: 5px 0;
   }
 }
 
