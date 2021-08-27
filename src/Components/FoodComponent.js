@@ -25,11 +25,11 @@ export const FoodComponent = ({Food, addFood, removeFood}) => {
                 </div>
                 <div className="input">
                         <Tooltip title="Remove">
-                                <RemoveIcon className="asd" style={{ fontSize: 30 }} onClick={removeOnClick}/>
+                                <RemoveIcon className="materialButton" style={{ fontSize: 30 }} onClick={removeOnClick}/>
                         </Tooltip>
                     <h3>{Food.amount}</h3>
                     <Tooltip title="Add">
-                            <AddIcon className="asd" style={{ fontSize: 30 }} onClick={AddOnClick} />
+                            <AddIcon className="materialButton" style={{ fontSize: 30 }} onClick={AddOnClick} />
                     </Tooltip>
                </div>
             </div>

@@ -201,7 +201,7 @@ span {
 
 .order{
   height: 1600px;
-  background-color: var(--secondary-color);
+  background-color:#E3E3E3;
   text-align: center;
 }
 .text{
@@ -209,6 +209,7 @@ span {
   top:150px;
   right:20px;
   left:20px;
+  color: var(--primary-color);
 }
 
 .sticky{
@@ -232,7 +233,7 @@ span {
 /*FoodComponent*/
 .form{
   
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--primary-color);
   border-radius: 5px;
   padding: 10px 80px;
   margin: 15px 15px;
@@ -252,12 +253,12 @@ span {
   width: 100%;
   margin-left: 5px;
 }
-.asd{
+.materialButton{
   cursor: pointer;
   outline: none;
   border: none;
   border-radius: 15px;
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--primary-color);
 }
 .asd:hover{
   background-color: var(--primary-color);  
