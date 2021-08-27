@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import { FoodComponent } from './FoodComponent';
-import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core/styles';
+
 
 export const Order_page = () => {
     
