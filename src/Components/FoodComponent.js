@@ -1,9 +1,8 @@
 import React from 'react'
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
-import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
-import { makeStyles } from '@material-ui/core/styles';
+
 
 export const FoodComponent = ({Food, addFood, removeFood}) => {
     
