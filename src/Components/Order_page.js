@@ -3,7 +3,7 @@ import { FoodComponent } from './FoodComponent';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
-export const Order = () => {
+export const Order_page = () => {
     
 
     const [sum, setSum] = useState(0);
