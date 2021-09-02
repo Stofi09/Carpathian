@@ -4,7 +4,7 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import Tooltip from '@material-ui/core/Tooltip';
 
 
-export const FoodComponent = ({Food, addFood, removeFood}) => {
+export const Food_Component = ({Food, addFood, removeFood}) => {
     
 
     

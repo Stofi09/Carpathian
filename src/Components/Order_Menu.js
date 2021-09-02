@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import { FoodComponent } from './FoodComponent'
+import { Food_Component } from './Food_Component'
 
 export const Order_Menu = ({nextStep,foods,addFood,removeFood,sum}) => {
     
@@ -16,7 +16,7 @@ export const Order_Menu = ({nextStep,foods,addFood,removeFood,sum}) => {
                <h1>Order online!</h1>
                     <h4>Scouuo urumemtuul kyul hullothya iunhum scouuo urumemtuul thekunched buthuruth fyaal werethul. Kethwe kyth fugwa kynaal ualmun buthuruth. Hyul scegenul kunuel.</h4>
                     { foods.map((food)=>
-                        <FoodComponent
+                        <Food_Component
                         Food = {food}
                         addFood = {addFood}
                         removeFood = {removeFood}
