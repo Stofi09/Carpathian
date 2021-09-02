@@ -5,6 +5,7 @@ import {Main_page} from "./Components/Main_page";
 import {Order_page} from "./Components/Order_page";
 import {About} from "./Components/About";
 import {Contact} from "./Components/Contact";
+import {Order_Confirmation} from "./Components/Order_Confirmation"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/order"  component={Order_page} />
           <Route path="/contact"  component={Contact} />
           <Route path="/about"  component={About} />
+          <Route path="/confirmation"  component={Order_Confirmation} />
       </div>
     </Router>
   );

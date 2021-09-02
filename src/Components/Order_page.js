@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
-import { FoodComponent } from './FoodComponent';
-
+import { Order_Confirmation } from './Order_Confirmation';
+import { Order_Menu } from './Order_Menu';
 
 export const Order_page = () => {
     
-
+    const [step, setStep] = useState(1);
     const [sum, setSum] = useState(0);
     const [foods, setFoods] = useState([
         {
@@ -26,8 +26,8 @@ export const Order_page = () => {
             price:20   
         }
     ])
-
-    
+  
+  
     const addFood = (id) =>{
         const updateFoods = [...foods];
         updateFoods[id].amount++;
@@ -43,7 +43,61 @@ export const Order_page = () => {
         }
         setFoods(updateFoods)
     }
-    return (
+
+    const   nextStep = () => {
+        setStep(step + 1);
+    }
+
+    const prevStep = () => {
+        setStep(step - 1);
+    }
+
+    const sendOrder = () => {
+        console.log("send order to backend.")
+        console.log(foods);
+    }
+
+    switch (step) {
+        case 1: return (
+        <div>
+               <Order_Menu
+                nextStep={nextStep}
+                foods = {foods}
+                addFood = {addFood}
+                removeFood = {removeFood}
+                sum={sum}
+               />
+            <div className="sticky">
+               <div className=" flex">
+                    <h2>Total sum : {sum}</h2> 
+                    <div className="step-buttons">
+                    <button onClick={nextStep} className="btn btn-outline">next</button>
+                    </div>
+                </div>
+           </div>
+        </div>)
+        case 2: return (
+            <div>
+               <Order_Confirmation
+                 prevStep={prevStep}
+                 foods = {foods}
+                 sum={sum}
+               />
+                  <div className="sticky">
+               <div className=" flex">
+                    <h2>Total sum : {sum}</h2> 
+                    <div className="step-buttons">
+                        <button onClick={prevStep} className="btn btn-outline">previous</button>
+                        <button onClick={sendOrder} className="btn btn-outline">Order</button>
+                    </div>
+                </div>
+           </div>
+            </div>
+        )
+    }
+
+    /*return (
+        <div>
         <div className="order">
            <div className="flex p-2">
                <div className="text">
@@ -56,15 +110,19 @@ export const Order_page = () => {
                         removeFood = {removeFood}
                         />
                     )}
-                   
                 </div>
            </div>
            <div className="sticky">
                <div className=" flex">
                     <h2>Total sum : {sum}</h2> 
-                    <button className="btn-outline">asd</button>
+                    <Link to="/confirmation">
+                         <button className="btn-outline" >asd</button>
+                    </Link>
                 </div>
            </div>
+              
         </div>
+          </div>
     )
+    */
 }
