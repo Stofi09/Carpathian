@@ -7,31 +7,13 @@ export const Order_page = () => {
     
     const [step, setStep] = useState(1);
     const [sum, setSum] = useState(0);
-    const [foods, setFoods] = useState([
-        {
-            id:0,
-            main:"hamburger menu",
-            amount:0,
-            price:10
-        },
-        {
-            id:1,
-            main:"vegburger menu",
-            amount:0,
-            price:30
-        },
-        {
-            id:2,
-            main:"cheeseburger menu",
-            amount:0,
-            price:20   
-        }
-    ])
+    const [foods, setFoods] = useState([])
   
     useEffect(() => {
         getAllFood()
           .then((data) => {
             console.log(data.data);
+            setFoods(data.data)
           })
           .catch(function (ex) {
             console.log(ex);
@@ -39,18 +21,26 @@ export const Order_page = () => {
       }, []);
   
     const addFood = (id) =>{
-        const updateFoods = [...foods];
-        updateFoods[id].amount++;
+       const updateFoods = [...foods];
+       updateFoods.map((food) =>{
+           if (food.id === id){
+               food.amount++;
+               setSum( food.price + sum)
+           }
+       })
         setFoods(updateFoods)
-        setSum( updateFoods[id].price + sum)
     }
 
     const removeFood = (id) => {
         const updateFoods = [...foods];
-        if (updateFoods[id].amount > 0){
-            updateFoods[id].amount--;
-            setSum( sum - updateFoods[id].price)
-        }
+        updateFoods.map((food)=>{
+            if (food.id === id){
+                if (food.amount > 0){
+                    food.amount--;
+                    setSum( sum - food.price)
+                }
+            }
+        })
         setFoods(updateFoods)
     }
 
