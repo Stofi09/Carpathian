@@ -1,6 +1,7 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { Order_Confirmation } from './Order_Confirmation';
 import { Order_Menu } from './Order_Menu';
+import {getAllFood} from "./Axios";
 
 export const Order_page = () => {
     
@@ -27,6 +28,15 @@ export const Order_page = () => {
         }
     ])
   
+    useEffect(() => {
+        getAllFood()
+          .then((data) => {
+            console.log(data.data);
+          })
+          .catch(function (ex) {
+            console.log(ex);
+          });
+      }, []);
   
     const addFood = (id) =>{
         const updateFoods = [...foods];
