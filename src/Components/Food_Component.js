@@ -20,7 +20,7 @@ export const Food_Component = ({Food, addFood, removeFood}) => {
         <div className="form">
             <div className="grid">
                 <div className="description">
-                    <h3>{Food.main} £{Food.price} : </h3>
+                    <h3>{Food.name} £{Food.price} : </h3>
                 </div>
                 <div className="input">
                         <Tooltip title="Remove">

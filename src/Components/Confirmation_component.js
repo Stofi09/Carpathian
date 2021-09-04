@@ -17,7 +17,7 @@ export const Confirmation_component = ({foods}) => {
             <div className="form">
             { isEmpty? 
                 foods.filter(food => food.amount > 0).map(filteredFood =>(
-                <h3>{filteredFood.amount}X {filteredFood.main}</h3>
+                <h3>{filteredFood.amount}X {filteredFood.name}</h3>
             ))       : 
                 <div> You haven't chosen a food yet.</div>
             }
